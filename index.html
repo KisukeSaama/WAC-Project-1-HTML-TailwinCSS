@@ -15,262 +15,608 @@
         />
         <link rel="stylesheet" href="./src/output.css" />
     </head>
-    <body>
-        <header>
-            <img src="assets/images/logo.png" alt="Klivio Logo" />
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#" class="no-underline">Les formations</a>
-                    </li>
-                    <li>
-                        <form action="#" method="GET">
-                            <input
-                                type="search"
-                                name="search"
-                                id="search"
-                                placeholder="Rechercher"
-                            />
-                            <button>
-                                <img
-                                    src="assets/icons/search.svg"
-                                    alt="Search logo"
+    <body
+        class="min-h-screen bg-gradient-to-b from-[#0b1220] via-[#16263a] to-[#213448] text-slate-100 font-['Montserrat'] antialiased"
+    >
+        <header
+            class="fixed top-0 z-40 w-full border-b border-white/10 bg-white/10 backdrop-blur-md"
+        >
+            <div
+                class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between gap-4"
+            >
+                <img
+                    src="assets/images/logo.png"
+                    alt="Klivio Logo"
+                    class="h-9 w-auto"
+                />
+                <nav class="hidden md:block">
+                    <ul class="flex items-center gap-6">
+                        <li>
+                            <a
+                                href="#"
+                                class="no-underline text-white hover:text-slate-200 transition"
+                            >
+                                Les formations
+                            </a>
+                        </li>
+                        <li>
+                            <form action="#" method="GET" class="relative">
+                                <input
+                                    type="search"
+                                    name="search"
+                                    id="search"
+                                    placeholder="Rechercher"
+                                    class="w-64 rounded-lg bg-slate-900/30 border border-white/20 px-3 py-2 pr-10 text-sm placeholder:text-slate-300/70"
                                 />
-                            </button>
-                        </form>
-                    </li>
-                    <li>
-                        <div>
-                            <button>Connexion</button>
-                            <button>Inscription</button>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <img
-                src="/assets/icons/Icon button togglable - standard.svg"
-                alt="Burger menu icon"
-            />
-        </header>
-        <main>
-            <div>
-                <h1 class="font-medium text-gray-500">
-                    Klivio, l’allié de votre progression
-                </h1>
-                <h2>
-                    Les meilleures formations sur le développement personnel
-                </h2>
-                <button>En savoir plus</button>
+                                <button
+                                    type="submit"
+                                    class="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-md opacity-80 hover:opacity-100 hover:bg-white/10 transition"
+                                >
+                                    <img
+                                        src="assets/icons/search.svg"
+                                        alt="Search logo"
+                                        class="h-4 w-4"
+                                    />
+                                </button>
+                            </form>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="rounded-lg px-4 py-2 text-sm text-white border border-white/15 bg-white/5 hover:bg-white/10 transition"
+                                >
+                                    Connexion
+                                </button>
+                                <button
+                                    class="rounded-lg px-4 py-2 text-sm bg-white text-black hover:bg-slate-200 transition"
+                                >
+                                    Inscription
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <img
+                    src="/assets/icons/Icon button togglable - standard.svg"
+                    alt="Burger menu icon"
+                    class="h-8 w-8 md:hidden opacity-90"
+                />
             </div>
-            <div>
-                <div>
-                    <h2>Les formations populaires</h2>
-                    <div>
-                        <div>
+        </header>
+        <main class="pt-24 mx-auto max-w-6xl px-4 pb-16 space-y-16">
+            <div class="relative text-center space-y-4 py-20">
+                <img
+                    src="assets/images/bg-header.png"
+                    alt="Women workspace"
+                    class="absolute inset-0 h-full w-full object-cover"
+                />
+                <div
+                    class="absolute h-full inset-0 bg-gradient-to-b from-[#0b1220]/90 via-[#0b1220]/60 to-[#213448]/90"
+                ></div>
+                <div class="relative z-10 space-y-4 px-4">
+                    <h1 class="font-medium text-slate-200/80">
+                        Klivio, l’allié de votre progression
+                    </h1>
+                    <h2
+                        class="text-3xl md:text-4xl font-semibold text-white leading-tight"
+                    >
+                        Les meilleures formations sur le développement personnel
+                    </h2>
+                    <button
+                        class="mt-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-200 transition"
+                    >
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+            <div class="space-y-10">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between gap-4">
+                        <h2 class="text-xl font-semibold">
+                            Les formations populaires
+                        </h2>
+                    </div>
+
+                    <div
+                        class="flex flex-wrap justify-evenly items-stretch gap-6"
+                    >
+                        <div
+                            class="group w-64 border border-white/10 rounded-2xl overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                        >
                             <img
                                 src="/assets/images/img-course.png"
                                 alt="Formation illustration"
+                                class="h-40 w-full object-cover"
                             />
-                            <div>
-                                <p>15,99 €</p>
-                                <p>60 €</p>
+                            <div class="p-4 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-lg font-bold text-slate-900">
+                                        15,99 €
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-400 line-through"
+                                    >
+                                        60 €
+                                    </p>
+                                </div>
+                                <h2
+                                    class="text-base font-semibold text-slate-900"
+                                >
+                                    Parler en public
+                                </h2>
+                                <p class="text-sm text-gray-600">
+                                    Sonia Lefèvre | Coach prise de parole
+                                </p>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                </div>
+                                <p class="text-sm text-gray-700">
+                                    Gagnez en aisance et captez votre auditoire
+                                </p>
                             </div>
-                            <h2>Parler en public</h2>
-                            <p>Sonia Lefèvre | Coach prise de parole</p>
-                            <div>
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                            </div>
-                            <p>Gagnez en aisance et captez votre auditoire</p>
                         </div>
-                        <div>
+                        <div
+                            class="group w-64 border border-white/10 rounded-2xl overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                        >
                             <img
                                 src="/assets/images/img-course.png"
                                 alt="Formation illustration"
+                                class="h-40 w-full object-cover"
                             />
-                            <div>
-                                <p>15,99 €</p>
-                                <p>60 €</p>
+                            <div class="p-4 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-lg font-bold text-slate-900">
+                                        15,99 €
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-400 line-through"
+                                    >
+                                        60 €
+                                    </p>
+                                </div>
+                                <h2
+                                    class="text-base font-semibold text-slate-900"
+                                >
+                                    Gérer le stress
+                                </h2>
+                                <p class="text-sm text-gray-600">
+                                    Lucie Garnier | Formatrice
+                                </p>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/faded-star.svg"
+                                        alt="Faded Star"
+                                    />
+                                </div>
+                                <p class="text-sm text-gray-700">
+                                    Apprenez à rester serein face aux défis
+                                </p>
                             </div>
-                            <h2>Gérer le stress</h2>
-                            <p>Lucie Garnier | Formatrice</p>
-                            <div>
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img
-                                    src="assets/icons/faded-star.svg"
-                                    alt="Faded Star"
-                                />
-                            </div>
-                            <p>Apprenez à rester serein face aux défis</p>
                         </div>
-                        <div>
+                        <div
+                            class="group w-64 border border-white/10 rounded-2xl overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                        >
                             <img
                                 src="/assets/images/img-course.png"
                                 alt="Formation illustration"
+                                class="h-40 w-full object-cover"
                             />
-                            <div>
-                                <p>15,99 €</p>
-                                <p>60 €</p>
+                            <div class="p-4 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-lg font-bold text-slate-900">
+                                        15,99 €
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-400 line-through"
+                                    >
+                                        60 €
+                                    </p>
+                                </div>
+                                <h2
+                                    class="text-base font-semibold text-slate-900"
+                                >
+                                    Travailler en équipe
+                                </h2>
+                                <p class="text-sm text-gray-600">
+                                    David Moreau | Expert
+                                </p>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                </div>
+                                <p class="text-sm text-gray-700">
+                                    Collaborez efficacement, même à distance
+                                </p>
                             </div>
-                            <h2>Travailler en équipe</h2>
-                            <p>David Moreau | Expert</p>
-                            <div>
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                            </div>
-                            <p>Collaborez efficacement, même à distance</p>
                         </div>
-                        <div>
+                        <div
+                            class="group w-64 border border-white/10 rounded-2xl overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                        >
                             <img
                                 src="/assets/images/img-course.png"
                                 alt="Formation illustration"
+                                class="h-40 w-full object-cover"
                             />
-                            <div>
-                                <p>15,99 €</p>
-                                <p>60 €</p>
+                            <div class="p-4 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-lg font-bold text-slate-900">
+                                        15,99 €
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-400 line-through"
+                                    >
+                                        60 €
+                                    </p>
+                                </div>
+                                <h2
+                                    class="text-base font-semibold text-slate-900"
+                                >
+                                    Gérer son temps
+                                </h2>
+                                <p class="text-sm text-gray-600">
+                                    Claire Dumas | Coach organisation
+                                </p>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/faded-star.svg"
+                                        alt="Faded Star"
+                                    />
+                                </div>
+                                <p class="text-sm text-gray-700">
+                                    Optimisez vos journées et gagnez en
+                                    efficacité
+                                </p>
                             </div>
-                            <h2>Gérer son temps</h2>
-                            <p>Claire Dumas | Coach organisation</p>
-                            <div>
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img
-                                    src="assets/icons/faded-star.svg"
-                                    alt="Faded Star"
-                                />
-                            </div>
-                            <p>
-                                Optimisez vos journées et gagnez en efficacité
-                            </p>
                         </div>
                     </div>
-                    <button>Voir plus de formations</button>
+                    <button
+                        class="mt-4 rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold hover:bg-white/10 transition"
+                    >
+                        Voir plus de formations
+                    </button>
                 </div>
-                <div>
-                    <h2>Les formations récentes</h2>
-                    <div>
-                        <div>
+                <div class="space-y-4">
+                    <h2 class="text-xl font-semibold">
+                        Les formations récentes
+                    </h2>
+                    <div
+                        class="flex flex-wrap justify-evenly items-stretch gap-6"
+                    >
+                        <div
+                            class="group w-64 border border-white/10 rounded-2xl overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                        >
                             <img
                                 src="/assets/images/img-course.png"
                                 alt="Formation illustration"
+                                class="h-40 w-full object-cover"
                             />
-                            <div>
-                                <p>15,99 €</p>
-                                <p>60 €</p>
+                            <div class="p-4 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-lg font-bold text-slate-900">
+                                        15,99 €
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-400 line-through"
+                                    >
+                                        60 €
+                                    </p>
+                                </div>
+                                <h2
+                                    class="text-base font-semibold text-slate-900"
+                                >
+                                    Mieux communiquer
+                                </h2>
+                                <p class="text-sm text-gray-600">
+                                    Julien Martel | Coach en comm.
+                                </p>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                </div>
+                                <p class="text-sm text-gray-700">
+                                    Améliorez vos échanges et votre impact
+                                    relationnel
+                                </p>
                             </div>
-                            <h2>Mieux communiquer</h2>
-                            <p>Julien Martel | Coach en comm.</p>
-                            <div>
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                            </div>
-                            <p>
-                                Améliorez vos échanges et votre impact
-                                relationnel
-                            </p>
                         </div>
-                        <div>
+                        <div
+                            class="group w-64 border border-white/10 rounded-2xl overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                        >
                             <img
                                 src="/assets/images/img-course.png"
                                 alt="Formation illustration"
+                                class="h-40 w-full object-cover"
                             />
-                            <div>
-                                <p>15,99 €</p>
-                                <p>60 €</p>
+                            <div class="p-4 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-lg font-bold text-slate-900">
+                                        15,99 €
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-400 line-through"
+                                    >
+                                        60 €
+                                    </p>
+                                </div>
+                                <h2
+                                    class="text-base font-semibold text-slate-900"
+                                >
+                                    Maîtriser ses émotions
+                                </h2>
+                                <p class="text-sm text-gray-600">
+                                    Amel Benali | Psy. du travail
+                                </p>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                </div>
+                                <p class="text-sm text-gray-700">
+                                    Développez calme et intelligence
+                                    émotionnelle
+                                </p>
                             </div>
-                            <h2>Maîtriser ses émotions</h2>
-                            <p>Amel Benali | Psy. du travail</p>
-                            <div>
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                            </div>
-                            <p>Développez calme et intelligence émotionnelle</p>
                         </div>
-                        <div>
+                        <div
+                            class="group w-64 border border-white/10 rounded-2xl overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                        >
                             <img
                                 src="/assets/images/img-course.png"
                                 alt="Formation illustration"
+                                class="h-40 w-full object-cover"
                             />
-                            <div>
-                                <p>15,99 €</p>
-                                <p>60 €</p>
+                            <div class="p-4 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-lg font-bold text-slate-900">
+                                        15,99 €
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-400 line-through"
+                                    >
+                                        60 €
+                                    </p>
+                                </div>
+                                <h2
+                                    class="text-base font-semibold text-slate-900"
+                                >
+                                    Résoudre les problèmes
+                                </h2>
+                                <p class="text-sm text-gray-600">
+                                    Thomas Rivière | Expert
+                                </p>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/faded-star.svg"
+                                        alt="Faded Star"
+                                    />
+                                </div>
+                                <p class="text-sm text-gray-700">
+                                    Analysez, décidez et trouvez des solutions
+                                    durables
+                                </p>
                             </div>
-                            <h2>Résoudre les problèmes</h2>
-                            <p>Thomas Rivière | Expert</p>
-                            <div>
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img
-                                    src="assets/icons/faded-star.svg"
-                                    alt="Faded Star"
-                                />
-                            </div>
-                            <p>
-                                Analysez, décidez et trouvez des solutions
-                                durables
-                            </p>
                         </div>
-                        <div>
+                        <div
+                            class="group w-64 border border-white/10 rounded-2xl overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                        >
                             <img
                                 src="/assets/images/img-course.png"
                                 alt="Formation illustration"
+                                class="h-40 w-full object-cover"
                             />
-                            <div>
-                                <p>15,99 €</p>
-                                <p>60 €</p>
+                            <div class="p-4 space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-lg font-bold text-slate-900">
+                                        15,99 €
+                                    </p>
+                                    <p
+                                        class="text-sm text-gray-400 line-through"
+                                    >
+                                        60 €
+                                    </p>
+                                </div>
+                                <h2
+                                    class="text-base font-semibold text-slate-900"
+                                >
+                                    Leadership positif
+                                </h2>
+                                <p class="text-sm text-gray-600">
+                                    Marc Nguyen | Consultant
+                                </p>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/faded-star.svg"
+                                        alt="Faded Star"
+                                    />
+                                </div>
+                                <p class="text-sm text-gray-700">
+                                    Inspirez, motivez et fédérez votre équipe
+                                </p>
                             </div>
-                            <h2>Leadership positif</h2>
-                            <p>Marc Nguyen | Consultant</p>
-                            <div>
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img src="assets/icons/star.svg" alt="Star" />
-                                <img
-                                    src="assets/icons/faded-star.svg"
-                                    alt="Faded Star"
-                                />
-                            </div>
-                            <p>Inspirez, motivez et fédérez votre équipe</p>
                         </div>
                     </div>
-                    <button>Voir plus de formations</button>
+                    <button
+                        class="mt-4 rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold hover:bg-white/10 transition"
+                    >
+                        Voir plus de formations
+                    </button>
                 </div>
-                <div>
-                    <h2>Avis Clients</h2>
-                    <div>
-                        <img
-                            src="/assets/images/juliette.png"
-                            alt="Photo of Juliette"
-                        />
-                        <h2>Juliette</h2>
-                        <div>
-                            <img src="assets/icons/star.svg" alt="Star" />
-                            <img src="assets/icons/star.svg" alt="Star" />
-                            <img src="assets/icons/star.svg" alt="Star" />
-                            <img src="assets/icons/star.svg" alt="Star" />
-                            <img src="assets/icons/star.svg" alt="Star" />
+            </div>
+            <section class="space-y-4">
+                <h2 class="text-xl font-semibold">Avis Clients</h2>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div
+                        class="rounded-2xl bg-white/10 border border-white/10 p-6 space-y-4"
+                    >
+                        <div class="flex items-center gap-3">
+                            <img
+                                src="/assets/images/juliette.png"
+                                alt="Photo of Juliette"
+                                class="h-l w-l rounded-full object-cover border border-white/10"
+                            />
+                            <div>
+                                <h2 class="font-semibold">Juliette</h2>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <p>
+                        <p class="text-sm leading-relaxed text-slate-100/90">
                             J’ai trouvé le parcours très bien structuré : vidéos
                             courtes, quizzes pertinents et projets pratiques qui
                             m’ont permis d’appliquer immédiatement les notions.
@@ -278,20 +624,42 @@
                             motivante — parfait pour se former en autonomie.
                         </p>
                     </div>
-                    <div>
-                        <img
-                            src="/assets/images/camille.png"
-                            alt="Photo of Camille"
-                        />
-                        <h2>Camille</h2>
-                        <div>
-                            <img src="assets/icons/star.svg" alt="Star" />
-                            <img src="assets/icons/star.svg" alt="Star" />
-                            <img src="assets/icons/star.svg" alt="Star" />
-                            <img src="assets/icons/star.svg" alt="Star" />
-                            <img src="assets/icons/star.svg" alt="Star" />
+                    <div
+                        class="rounded-2xl bg-white/10 border border-white/10 p-6 space-y-4"
+                    >
+                        <div class="flex items-center gap-3">
+                            <img
+                                src="/assets/images/camille.png"
+                                alt="Photo of Camille"
+                                class="h-l w-l rounded-full object-cover border border-white/10"
+                            />
+                            <div>
+                                <h2 class="font-semibold">Camille</h2>
+                                <div class="flex gap-1">
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                    <img
+                                        src="assets/icons/star.svg"
+                                        alt="Star"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <p>
+                        <p class="text-sm leading-relaxed text-slate-100/90">
                             Bon équilibre entre théorie et pratique. Les
                             chapitres sont détaillés, et le support et les
                             corrections automatiques ont vraiment aidé. Idéal
@@ -299,104 +667,152 @@
                         </p>
                     </div>
                 </div>
-                <div>
-                    <h2>Les avantages Klivio</h2>
-                    <ul>
-                        <li>
-                            <img
-                                src="/assets/icons/arrow-up-right.svg"
-                                alt="arrow icon"
-                            />
-                            <span>Suivi de sa progression</span>
-                        </li>
-                        <li>
-                            <img
-                                src="/assets/icons/edit-01.svg"
-                                alt="pen icon"
-                            />
-                            <span>
-                                Exercices et QCM pour la mise en pratique</span
+            </section>
+            <section
+                class="rounded-2xl bg-white/10 border border-white/10 p-6 md:p-8"
+            >
+                <div class="grid gap-8 lg:grid-cols-2 items-center">
+                    <div class="space-y-4">
+                        <h2 class="text-xl font-semibold">
+                            Les avantages Klivio
+                        </h2>
+                        <ul class="space-y-3">
+                            <li
+                                class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
                             >
-                        </li>
-                        <li>
-                            <img
-                                src="/assets/icons/download-02.svg"
-                                alt="download icon"
-                            />
-                            <span
-                                >Possibilité de télécharger/imprimer les
-                                formations</span
+                                <img
+                                    src="/assets/icons/arrow-up-right.svg"
+                                    alt="arrow icon"
+                                    class="h-5 w-5"
+                                />
+                                <span>Suivi de sa progression</span>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
                             >
-                        </li>
-                        <li>
-                            <img
-                                src="/assets/icons/star-02.svg"
-                                alt="star icon"
-                            />
-                            <span> Contenu qualitatif et vérifié</span>
-                        </li>
-                        <li>
-                            <img
-                                src="/assets/icons/clock-backward.svg"
-                                alt="clock icon"
-                            />
-                            <span>Suivi en autonomie, 24h/24, 7j/7</span>
-                        </li>
-                        <li>
-                            <img
-                                src="/assets/icons/annotation-typing.svg"
-                                alt="typing icon"
-                            />
-                            <span
-                                >Espaces d’échanges dédiés pour poser ses
-                                questions sur les formations</span
+                                <img
+                                    src="/assets/icons/edit-01.svg"
+                                    alt="pen icon"
+                                    class="h-5 w-5"
+                                />
+                                <span
+                                    >Exercices et QCM pour la mise en
+                                    pratique</span
+                                >
+                            </li>
+                            <li
+                                class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
                             >
-                        </li>
-                    </ul>
+                                <img
+                                    src="/assets/icons/download-02.svg"
+                                    alt="download icon"
+                                    class="h-5 w-5"
+                                />
+                                <span
+                                    >Possibilité de télécharger/imprimer les
+                                    formations</span
+                                >
+                            </li>
+                            <li
+                                class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                            >
+                                <img
+                                    src="/assets/icons/star-02.svg"
+                                    alt="star icon"
+                                    class="h-5 w-5"
+                                />
+                                <span>Contenu qualitatif et vérifié</span>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                            >
+                                <img
+                                    src="/assets/icons/clock-backward.svg"
+                                    alt="clock icon"
+                                    class="h-5 w-5"
+                                />
+                                <span>Suivi en autonomie, 24h/24, 7j/7</span>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                            >
+                                <img
+                                    src="/assets/icons/annotation-typing.svg"
+                                    alt="typing icon"
+                                    class="h-5 w-5"
+                                />
+                                <span
+                                    >Espaces d’échanges dédiés pour poser ses
+                                    questions sur les formations</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
                     <img
                         src="/assets/images/avantages.png"
                         alt="Illustration of someone in an office"
+                        class="w-full rounded-2xl object-cover"
                     />
                 </div>
-                <div>
-                    <h2>
-                        Créez vos formations
-                        <span>avec Klivio</span>
-                    </h2>
-                    <img
-                        src="/assets/images/become-author.png"
-                        alt="Illustration of a desk"
-                    />
-                    <ul>
-                        <li>
+            </section>
+            <section
+                class="rounded-2xl bg-white/10 border border-white/10 p-6 md:p-8"
+            >
+                <div class="grid gap-8 lg:grid-cols-2 items-center">
+                    <div class="space-y-4">
+                        <h2 class="text-xl font-semibold">
+                            Créez vos formations avec Klivio
+                        </h2>
+                        <img
+                            src="/assets/images/become-author.png"
+                            alt="Illustration of a desk"
+                            class="w-full rounded-2xl border border-white/10 object-cover"
+                        />
+                    </div>
+                    <ul class="space-y-3">
+                        <li
+                            class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                        >
                             <img
                                 src="/assets/icons/coin-hand.svg"
                                 alt="Coin hand icon"
+                                class="h-5 w-5"
                             />
-                            <span>
-                                Commission unique, au pourcentage sur les ventes
-                            </span>
+                            <span
+                                >Commission unique, au pourcentage sur les
+                                ventes</span
+                            >
                         </li>
-                        <li>
+                        <li
+                            class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                        >
                             <img
                                 src="/assets/icons/heart.svg"
                                 alt="Hearth icon"
+                                class="h-5 w-5"
                             />
-                            <span> Mise en avant sur la plateforme </span>
+                            <span>Mise en avant sur la plateforme</span>
                         </li>
-                        <li>
+                        <li
+                            class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                        >
                             <img
                                 src="/assets/icons/pencil-01.svg"
                                 alt="Pen icon"
+                                class="h-5 w-5"
                             />
-                            <span>
-                                Contrôle total sur le cours : contenu, prix
-                            </span>
+                            <span
+                                >Contrôle total sur le cours : contenu,
+                                prix</span
+                            >
                         </li>
-                        <li>
+                        <li
+                            class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                        >
                             <img
                                 src="/assets/icons/settings.svg"
                                 alt="Settings icon"
+                                class="h-5 w-5"
                             />
                             <span>
                                 Fonctionnalités avancées : espace commentaires,
@@ -406,10 +822,13 @@
                                 la facturation, etc
                             </span>
                         </li>
-                        <li>
+                        <li
+                            class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                        >
                             <img
                                 src="/assets/icons/user-profile-square.svg"
                                 alt="User profile icon"
+                                class="h-5 w-5"
                             />
                             <span>
                                 Le professeur reste 100% propriétaire de sa
@@ -418,17 +837,21 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h2>À propos de Klivio</h2>
+            </section>
+            <section class="space-y-4">
+                <h2 class="text-xl font-bold">À propos de Klivio</h2>
+                <div class="rounded-2xl bg-white/10 border border-white/10 p-6">
                     <div>
-                        <p>
+                        <p class="text-sm text-slate-100/90">
                             Chez Klivio, nous défendons des valeurs
                             fondamentales qui définissent notre approche
                             éducative. Nous nous engageons à assurer une
                             rémunération équitable pour les créateurs de
                             contenu, reconnaissant la qualité de leur travail.
                         </p>
-                        <p>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-sm text-slate-100/90">
                             Favorisant l'autonomie d'apprentissage, notre
                             plateforme offre la flexibilité nécessaire pour
                             explorer divers sujets. La transparence est au cœur
@@ -441,13 +864,17 @@
                         </p>
                     </div>
                 </div>
-                <div>
-                    <img src="/assets/images/logo.png" alt="Klivio Logo" />
-                </div>
+            </section>
+            <div class="flex justify-center">
+                <img
+                    src="/assets/images/logo.png"
+                    alt="Klivio Logo"
+                    class="h-10 opacity-90"
+                />
             </div>
         </main>
-        <footer>
-            <div>
+        <footer class="border-t border-white/10 bg-slate-950/30">
+            <div class="flex flex-row justify-evenly items-center">
                 <form action="footer__contact-form">
                     <h2>Nous contacter</h2>
                     <hr />
@@ -489,7 +916,7 @@
             </div>
             <div></div>
             <img src="assets/images/logo.png" alt="Klivio Logo" />
-            <div>
+            <div class="flex flex-col justify-evenly items-center">
                 <h2>Mentions légales</h2>
                 <div>
                     <a href="#">CGU</a>
@@ -498,7 +925,7 @@
                     <a href="#">Contact</a>
                 </div>
             </div>
-            <div>
+            <div class="flex flex-col justify-evenly items-center">
                 <h2>Coordonnées</h2>
                 <ul>
                     <li>
