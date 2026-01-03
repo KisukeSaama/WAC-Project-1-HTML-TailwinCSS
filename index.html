@@ -62,11 +62,13 @@
                         </li>
                         <li>
                             <div class="flex items-center gap-2">
-                                <button
-                                    class="rounded-lg px-4 py-2 text-sm text-white border border-white/15 bg-white/5 hover:bg-white/10 transition"
+                                <a
+                                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                                    target="_blank"
+                                    class="inline-flex items-center justify-center rounded-lg px-5 py-2 text-sm font-semibold border border-white/15 bg-white/5 hover:bg-white/10 transition"
                                 >
                                     Connexion
-                                </button>
+                                </a>
                                 <button
                                     class="rounded-lg px-4 py-2 text-sm bg-white text-black hover:bg-slate-200 transition"
                                 >
@@ -874,116 +876,175 @@
             </div>
         </main>
         <footer class="border-t border-white/10 bg-slate-950/30">
-            <div class="flex flex-row justify-evenly items-center">
-                <form action="footer__contact-form">
-                    <h2>Nous contacter</h2>
-                    <hr />
-                    <div>
-                        <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder="Nom"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <input
-                            type="email"
-                            name="mail"
-                            id="mail"
-                            placeholder="Email"
-                            required
-                        />
-                    </div>
-                    <div>
+            <div class="mx-auto max-w-6xl px-4 py-10 space-y-6">
+                <div class="rounded-2xl bg-white/10 border border-white/10 p-5">
+                    <form action="footer__contact-form" class="space-y-3">
+                        <h2 class="text-lg font-semibold text-white">
+                            Nous contacter
+                        </h2>
+                        <div class="grid gap-3 md:grid-cols-2">
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Nom"
+                                required
+                                class="w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-300/70 focus:outline-none focus:ring-2 focus:ring-white/20"
+                            />
+                            <input
+                                type="email"
+                                name="mail"
+                                id="mail"
+                                placeholder="Email"
+                                required
+                                class="w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-300/70 focus:outline-none focus:ring-2 focus:ring-white/20"
+                            />
+                        </div>
+
                         <textarea
                             name="message"
                             id="message"
                             placeholder="Votre message"
                             required
+                            class="w-full min-h-24 rounded-lg bg-white/5 border border-white/10 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-300/70 focus:outline-none focus:ring-2 focus:ring-white/20"
                         ></textarea>
-                    </div>
-                    <div>
+
                         <input
                             type="button"
                             name="submit"
                             id="submit"
                             value="Envoyer"
+                            class="w-full rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-200 transition cursor-pointer"
+                        />
+                    </form>
+                </div>
+                <div class="flex justify-center">
+                    <div>
+                        <img
+                            src="assets/images/logo.png"
+                            alt="Klivio Logo"
+                            class="h-10 w-auto opacity-95"
                         />
                     </div>
-                </form>
-            </div>
-            <div></div>
-            <img src="assets/images/logo.png" alt="Klivio Logo" />
-            <div class="flex flex-col justify-evenly items-center">
-                <h2>Mentions légales</h2>
-                <div>
-                    <a href="#">CGU</a>
-                    <a href="#">CGV</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Contact</a>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div
+                        class="rounded-2xl bg-white/10 border border-white/10 p-5 flex flex-col justify-evenly"
+                    >
+                        <h2 class="text-lg font-semibold text-white">
+                            Mentions légales
+                        </h2>
+                        <div class="flex flex-col gap-2 text-sm text-slate-200">
+                            <a href="#" class="hover:text-white transition"
+                                >CGU</a
+                            >
+                            <a href="#" class="hover:text-white transition"
+                                >CGV</a
+                            >
+                            <a href="#" class="hover:text-white transition"
+                                >FAQ</a
+                            >
+                            <a href="#" class="hover:text-white transition"
+                                >Contact</a
+                            >
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-2xl bg-white/10 border border-white/10 p-5 flex flex-col justify-evenly"
+                    >
+                        <h2 class="text-lg font-semibold text-white">
+                            Coordonnées
+                        </h2>
+                        <ul class="space-y-3 text-sm text-slate-200">
+                            <li class="flex items-start gap-3">
+                                <img
+                                    src="/assets/icons/marker-02.svg"
+                                    alt="localisation icon"
+                                    class="h-5 w-5 mt-0.5"
+                                />
+                                <span
+                                    >1 place république,<br />75003 Paris</span
+                                >
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <img
+                                    src="/assets/icons/phone.svg"
+                                    alt="phone icon"
+                                    class="h-5 w-5"
+                                />
+                                <span>01.02.03.04.05</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <img
+                                    src="/assets/icons/mail-01.svg"
+                                    alt="letter icon"
+                                    class="h-5 w-5"
+                                />
+                                <span>contact@klivio.fr</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="rounded-2xl bg-white/10 border border-white/10 p-4 flex justify-center"
+                >
+                    <ul class="flex gap-3">
+                        <li>
+                            <a
+                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                                target="_blank"
+                                class="inline-flex items-center justify-center rounded-lg px-5 py-2 text-sm font-semibold border border-white/15 bg-white/5 hover:bg-white/10 transition"
+                            >
+                                Connexion
+                            </a>
+                        </li>
+                        <li>
+                            <button
+                                class="rounded-lg px-5 py-2 text-sm bg-white text-slate-900 hover:bg-slate-200 transition"
+                            >
+                                Inscription
+                            </button>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="flex flex-col justify-evenly items-center">
-                <h2>Coordonnées</h2>
-                <ul>
-                    <li>
-                        <img
-                            src="/assets/icons/marker-02.svg"
-                            alt="localisation icon"
-                        />
-                        <span
-                            >1 place république,<br />
-                            75003 Paris</span
-                        >
-                    </li>
-                    <li>
-                        <img src="/assets/icons/phone.svg" alt="phone icon" />
-                        <span>01.02.03.04.05</span>
-                    </li>
-                    <li>
-                        <img
-                            src="/assets/icons/mail-01.svg"
-                            alt="letter icon"
-                        />
-                        <span>contact@klivio.fr</span>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <button>Connexion</button>
-                    </li>
-                    <li>
-                        <button>Inscription</button>
-                    </li>
-                </ul>
-            </div>
-            <hr />
-            <div>
-                <p>© Klivio - 2025</p>
-            </div>
-            <div>
-                <h2>Suivez - nous</h2>
-                <div>
-                    <a href=""
-                        ><img
-                            src="assets/icons/facebook.svg"
-                            alt="Facebook Logo"
-                    /></a>
-                    <a href=""><img src="assets/icons/x.svg" alt="X Logo" /></a>
-                    <a href=""
-                        ><img
-                            src="assets/icons/instagram.svg"
-                            alt="Instagram Logo"
-                    /></a>
-                    <a href=""
-                        ><img
-                            src="assets/icons/linkedin.svg"
-                            alt="Linkedin Logo"
-                    /></a>
+            <div class="border-t border-white/10">
+                <div
+                    class="mx-auto max-w-6xl px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3"
+                >
+                    <p class="text-sm text-slate-200/80">© Klivio - 2025</p>
+
+                    <div class="flex items-center gap-3">
+                        <h2 class="text-sm font-semibold text-slate-100">
+                            Suivez - nous
+                        </h2>
+                        <div class="flex gap-2">
+                            <a href=""
+                                ><img
+                                    src="assets/icons/facebook.svg"
+                                    alt="Facebook Logo"
+                                    class="h-5 w-5"
+                            /></a>
+                            <a href=""
+                                ><img
+                                    src="assets/icons/x.svg"
+                                    alt="X Logo"
+                                    class="h-5 w-5"
+                            /></a>
+                            <a href=""
+                                ><img
+                                    src="assets/icons/instagram.svg"
+                                    alt="Instagram Logo"
+                                    class="h-5 w-5"
+                            /></a>
+                            <a href=""
+                                ><img
+                                    src="assets/icons/linkedin.svg"
+                                    alt="Linkedin Logo"
+                                    class="h-5 w-5"
+                            /></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
